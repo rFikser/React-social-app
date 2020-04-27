@@ -1,0 +1,13 @@
+.backLogo {
+    background-image: url("./img/background.jpg");
+    height: 160px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0,0,0, 0.2);
+    box-shadow: -20px 20px 8px -10px rgba(0, 0, 0, .5);
+}
+
+.profileDiscription {
+    padding: 10px;
+}

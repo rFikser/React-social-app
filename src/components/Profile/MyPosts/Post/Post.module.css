@@ -1,0 +1,21 @@
+.postWrap {
+    display: flex;
+    margin-top: 10px;
+}
+
+.likes {
+    padding-left: 10px;
+}
+
+.message {
+    position: relative;
+}
+
+.likeIcon {
+    position: absolute;
+    background-image: url("https://png.pngtree.com/png-vector/20190223/ourlarge/pngtree-vector-like-icon-png-image_695769.jpg");
+    background-repeat: no-repeat;
+    padding: 20px;
+    margin-left: 10px;
+    background-size: 20px;
+}
