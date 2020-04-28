@@ -7,9 +7,7 @@ const Header = () => {
         <header className={s.header}>
             <div className={s.header__content}>
                 <div className={s.header_left_side}>
-                    <div className={s.header_logo}>
-                        <img className={s.logo} src='/logo.png' alt="logo" />
-                    </div>
+
                     <div className={s.header_search}>
                         <input className={s.search} type='search' placeholder='Search...' />
                     </div>

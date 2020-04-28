@@ -1,13 +1,7 @@
-.myPosts {
-    padding: 10px;
-    background-color: rgba(0,0,0, .2);
-    border-radius: 10px;
-}
-
 .submitArea {
     display: flex;
+    align-content: flex-end;
     align-items: flex-end;
-    padding-bottom: 20px;
 }
 
 .submitButton  button{
@@ -15,21 +9,20 @@
     margin: 0 15px;
 }
 
-.textArea{
+.textArea {
     height: 100px;
     background-color: #F4F7F8;
     border: none;
     border-left: 6px solid grey;
     border-radius: 10px;
     color: #4D4E53;
-    width: 500px;
+    width: 300px;
     max-width: 700px;
     font-size: 90%;
     display: block;
     outline: none;
     resize: none;
     font-size: 20px;
-
 }
 
 button {

@@ -3,7 +3,7 @@ import s from './Dialogs.module.css'
 import {NavLink} from "react-router-dom";
 import YourMessage from "./YourMessage/YourMessage";
 import FriendMessage from "./FriendMessage/FriendMessage";
-
+import SubmitArea from './MessageToSendArea/SubmitArea'
 
 const DialogItem = (props) => {
 
@@ -29,11 +29,16 @@ const Dialogs = (props) => {
             <div className={s.dialog_items}>
                 {dialogElements}
             </div>
-            <div className={s.messages}>
-                <FriendMessage message="Hello"/>
-                {messagesElements[0]}
-                <FriendMessage message="Bye"/>
-                {messagesElements[1]}
+            <div className={s.messagesArea}>
+                <div className={s.messages}>
+                    <FriendMessage message="Hello"/>
+                    {messagesElements}
+                </div>
+                <div className={s.submitText}>
+                    <SubmitArea sendMessage={props.sendMessage}
+                                updateText={props.updateText}
+                    />
+                </div>
             </div>
         </div>
     )

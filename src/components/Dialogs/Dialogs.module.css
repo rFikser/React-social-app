@@ -15,10 +15,14 @@
     padding: 10px;
 }
 
-.messages {
+.messagesArea {
+    min-height: 600px;
     padding: 10px;
     background-color: rgba(0,0,0, .2);
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .dialog_item a {
@@ -31,3 +35,11 @@
     font-size: 20px;
     font-weight: bold;
 }
+
+.submitText {
+    padding: 20px 20px;
+}
+
+
+
+
