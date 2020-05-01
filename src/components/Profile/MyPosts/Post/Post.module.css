@@ -5,6 +5,7 @@
     align-items: center;
     border-radius: 10px;
     justify-content: flex-start;
+    grid-area: post;
 }
 
 .postWrap:first-child {
@@ -14,6 +15,7 @@
 .likes {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     margin-top: 10px;
 }
 
@@ -23,11 +25,26 @@
     font-size: 20px;
 }
 
+/*.likeIcon {*/
+/*    position: absolute;*/
+/*    background-image: url("https://png.pngtree.com/png-vector/20190223/ourlarge/pngtree-vector-like-icon-png-image_695769.jpg");*/
+/*    background-repeat: no-repeat;*/
+/*    padding: 20px;*/
+/*    margin-left: -10px;*/
+/*    background-size: 25px;*/
+/*}*/
+
 .likeIcon {
-    position: absolute;
-    background-image: url("https://png.pngtree.com/png-vector/20190223/ourlarge/pngtree-vector-like-icon-png-image_695769.jpg");
-    background-repeat: no-repeat;
-    padding: 20px;
-    margin-left: -10px;
-    background-size: 25px;
+    padding: 5px 10px;
+    margin-right: 10px;
+    outline: none;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.likeIcon:hover {
+    padding: 7px 12px;
+    background-color: black;
+    color: #fff;
+
 }

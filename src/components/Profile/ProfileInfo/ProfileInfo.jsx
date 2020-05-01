@@ -5,10 +5,11 @@ const ProfileInfo = () => {
     return (
         <div>
             <div className={s.profile_logo}>
-             <div className={s.backLogo}></div>
+                <div className={s.backLogo}></div>
             </div>
             <div className={s.profileDiscription}>
-                discription
+                <div className="profileName">Name: <b>MyName</b></div>
+                <div className="profileCity">City: <b>MyCity</b></div>
             </div>
 
         </div>

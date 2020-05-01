@@ -4,10 +4,16 @@
     width: 100%;
     background-size: cover;
     background-position: center;
-    background-color: rgba(0,0,0, 0.2);
-    box-shadow: -20px 20px 8px -10px rgba(0, 0, 0, .5);
+    background-color: rgba(0, 0, 0, 0.2);
+    /*box-shadow: -20px 20px 8px -10px rgba(0, 0, 0, .5);*/
 }
 
 .profileDiscription {
     padding: 10px;
+    display: grid;
+    grid-template-columns: 5fr 5fr;
+    font-size: 18px;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin: 10px auto;
+    border-radius: 7px;
 }

@@ -1,0 +1,45 @@
+.dialogs {
+    display: grid;
+    grid-template-columns: 3fr 7fr;
+    grid-gap: 5px;
+
+}
+
+.dialog_items {
+    padding: 10px;
+    background-color: rgba(0,0,0, .2);
+    border-radius: 10px;
+}
+
+.dialog_item {
+    padding: 10px;
+}
+
+.messagesArea {
+    min-height: 600px;
+    padding: 10px;
+    background-color: rgba(0,0,0, .2);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.dialog_item a {
+    text-decoration: none;
+    color: black;
+    transition: 0.1s ease-in-out;
+}
+
+.dialog_item a.active {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.submitText {
+    padding: 20px 20px;
+}
+
+
+
+

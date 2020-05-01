@@ -7,7 +7,7 @@ import {NavLink} from "react-router-dom";
 const SideNav = (props) => {
     return (
         <div className={s.nav}>
-            <nav >
+            <nav>
                 <div className={s.container_avatar}>
                     <img className={s.avatar}
                          src='https://vokrug.tv/pic/news/5/f/c/2/rsz300x300_5fc2879465129c11d65749ab9e3db7cc.jpg'
@@ -32,7 +32,7 @@ const SideNav = (props) => {
 
             </nav>
             <div className={s.friendsContainer}>
-                <Friends images={props.state.friendsImage}/>
+                <Friends/>
             </div>
         </div>
     );

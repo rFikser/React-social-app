@@ -9,11 +9,11 @@ const Header = () => {
                 <div className={s.header_left_side}>
 
                     <div className={s.header_search}>
-                        <input className={s.search} type='search' placeholder='Search...' />
+                        <input className={s.search} type='search' placeholder='Search...'/>
                     </div>
                 </div>
                 <div className='header-right-side'>
-                    <Navbar />
+                    <Navbar/>
                 </div>
             </div>
         </header>

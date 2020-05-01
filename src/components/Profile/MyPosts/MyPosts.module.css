@@ -1,21 +1,25 @@
 .myPosts {
     padding: 10px;
-    background-color: rgba(0,0,0, .2);
+    background-color: rgba(0, 0, 0, .2);
     border-radius: 10px;
 }
 
 .submitArea {
     display: flex;
-    align-items: flex-end;
+    justify-content: flex-start;
     padding-bottom: 20px;
 }
 
-.submitButton  button{
+.submitButton button {
     padding: 10px 15px;
     margin: 0 15px;
+    height: 100%;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
 }
 
-.textArea{
+.textArea {
     height: 100px;
     background-color: #F4F7F8;
     border: none;
@@ -24,7 +28,6 @@
     color: #4D4E53;
     width: 500px;
     max-width: 700px;
-    font-size: 90%;
     display: block;
     outline: none;
     resize: none;
@@ -35,3 +38,6 @@
 button {
     border: none;
 }
+
+
+

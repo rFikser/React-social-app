@@ -1,45 +1,92 @@
-.dialogs {
+.dialogContainer {
     display: grid;
-    grid-template-columns: 3fr 7fr;
-    grid-gap: 5px;
+    grid-template-columns: 2fr 10fr;
+    grid-column-gap: 5px;
 
 }
 
-.dialog_items {
-    padding: 10px;
-    background-color: rgba(0,0,0, .2);
-    border-radius: 10px;
-}
-
-.dialog_item {
-    padding: 10px;
-}
-
-.messagesArea {
-    min-height: 600px;
-    padding: 10px;
-    background-color: rgba(0,0,0, .2);
+.dialogItems {
+    background-color: rgba(0, 0, 0, .2);
+    min-height: 650px;
     border-radius: 10px;
     display: flex;
+    justify-content: center;
     flex-direction: column;
-    justify-content: space-between;
+    align-items: center;
 }
 
-.dialog_item a {
+.dialogItem {
+    margin-top: 10px;
+}
+
+.dialogItem a {
     text-decoration: none;
     color: black;
-    transition: 0.1s ease-in-out;
+    transition: 0.3s;
 }
 
-.dialog_item a.active {
+.dialogItem a:hover {
     font-size: 20px;
     font-weight: bold;
 }
 
-.submitText {
-    padding: 20px 20px;
+.messagesContainer {
+    background-color: rgba(0, 0, 0, .2);
+    min-height: 650px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: 4fr 2fr;
 }
 
+.messageForm {
+    align-self: flex-end;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
 
+.messageForm textarea {
+    resize: none;
+    outline: none;
+    height: 100px;
+    background-color: #F4F7F8;
+    border: none;
+    border-left: 6px solid grey;
+    border-radius: 10px;
+    color: #4D4E53;
+    width: 500px;
+    max-width: 700px;
+    font-size: 20px;
+    display: block
+}
 
+.myMessage {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    margin: 20px 50px;
+    flex-wrap: wrap;
 
+}
+
+.messageForm button {
+    outline: none;
+    border-radius: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    border: none;
+}
+
+.messageItem {
+    width: 50%;
+    font-size: 20px;
+    padding: 10px 50px;
+    justify-content: flex-end;
+    display: flex;
+    margin-top: 10px;
+    background: #F4F7F8;
+    border-radius: 10px;
+    align-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}

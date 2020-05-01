@@ -1,0 +1,33 @@
+.postWrap {
+    display: flex;
+    margin-top: 10px;
+    background: #F4F7F8;
+    align-items: center;
+    border-radius: 10px;
+    justify-content: flex-start;
+}
+
+.postWrap:first-child {
+    padding: 15px
+}
+
+.likes {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.message {
+    position: relative;
+    margin-left: 15px;
+    font-size: 20px;
+}
+
+.likeIcon {
+    position: absolute;
+    background-image: url("https://png.pngtree.com/png-vector/20190223/ourlarge/pngtree-vector-like-icon-png-image_695769.jpg");
+    background-repeat: no-repeat;
+    padding: 20px;
+    margin-left: -10px;
+    background-size: 25px;
+}

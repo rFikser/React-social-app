@@ -1,47 +1,44 @@
 import React from "react";
-import s from './Dialogs.module.css'
-import {NavLink} from "react-router-dom";
-import YourMessage from "./YourMessage/YourMessage";
-import FriendMessage from "./FriendMessage/FriendMessage";
-import SubmitArea from './MessageToSendArea/SubmitArea'
+import s from './Dialogs.module.css';
+import DialogItem from "./DialogItem/DialogItem";
+import MessageItem from "./MessageItem/MessageItem";
 
-const DialogItem = (props) => {
-
-    let path = '/dialogs/' + props.id;
-
-    return (
-        <div className={s.dialog_item}>
-            <NavLink to={path} activeClassName={s.active}>{props.name}</NavLink>
-        </div>
-    )
-
-};
 
 
 const Dialogs = (props) => {
 
-    let dialogElements = props.state.dialogs.map(d => <DialogItem name={d.name} id={d.id}/>)
-    let messagesElements = props.state.messages.map(m => <YourMessage message={m.message} id={m.id}/>)
+    let state = props.dialogPage;
+    let newText = React.createRef();
 
+    let dialogElement = state.dialogs.map( dialog => <DialogItem name={dialog.name} id={dialog.id}/>);
+    let messageElement = state.messages.map(m => <MessageItem  id={m.id} message={m.message}/>)
+
+    let onSendMessage = () => {
+        props.sendMessage();
+        props.updateText('')
+    }
+
+    let onChangeText = () => {
+        let text = newText.current.value;
+        props.updateText(text)
+    }
 
     return (
-        <div className={s.dialogs}>
-            <div className={s.dialog_items}>
-                {dialogElements}
+        <div className={s.dialogContainer}>
+            <div className={s.dialogItems}>
+                {dialogElement}
             </div>
-            <div className={s.messagesArea}>
-                <div className={s.messages}>
-                    <FriendMessage message="Hello"/>
-                    {messagesElements}
+            <div className={s.messagesContainer}>
+                <div className={s.myMessage}>
+                    {messageElement}
                 </div>
-                <div className={s.submitText}>
-                    <SubmitArea sendMessage={props.sendMessage}
-                                updateText={props.updateText}
-                    />
+                <div className={s.messageForm}>
+                    <textarea ref={newText} placeholder='Type here...' onChange={onChangeText} value={props.textAreaWords}></textarea>
+                    <button onClick={onSendMessage}>Send</button>
                 </div>
             </div>
         </div>
     )
-}
+};
 
 export default Dialogs;
