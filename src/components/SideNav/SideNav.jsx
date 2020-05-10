@@ -21,6 +21,9 @@ const SideNav = (props) => {
                     <NavLink to='/dialogs' activeClassName={s.active}>Messages</NavLink>
                 </div>
                 <div className={s.item}>
+                    <NavLink to='/users' activeClassName={s.active}>Friends</NavLink>
+                </div>
+                <div className={s.item}>
                     <NavLink to="/news" activeClassName={s.active}>News</NavLink>
                 </div>
                 <div className={s.item}>
@@ -29,6 +32,7 @@ const SideNav = (props) => {
                 <div className={s.item}>
                     <NavLink to="/settings" activeClassName={s.active}>Settings</NavLink>
                 </div>
+
 
             </nav>
             <div className={s.friendsContainer}>

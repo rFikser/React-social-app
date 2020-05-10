@@ -5,19 +5,19 @@ import {connect} from "react-redux";
 
 let mapStateToProps = (state) => {
     return {
-        posts : state.profilePage.posts,
-        textAreaWords : state.profilePage.textAreaWords
+        posts: state.profilePage.posts,
+        textAreaWords: state.profilePage.textAreaWords
     }
 }
 
 let mapDispatchToProps = (dispatch) => {
-    return{
-        updateText : (text) => {
+    return {
+        updateText: (text) => {
             let action = updateTextAreaProfileActionCreator(text)
             dispatch(action);
 
         },
-        addPost : () => {
+        addPost: () => {
             dispatch(addPostActionCreator());
         }
     }

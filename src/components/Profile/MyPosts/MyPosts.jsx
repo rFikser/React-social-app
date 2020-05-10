@@ -6,7 +6,7 @@ import s from './MyPosts.module.css';
 const MyPosts = (props) => {
     let textAreaValue = React.createRef();
     let postElements =
-        props.posts.map(post => <Post message={post.message} likeCounts={post.likesCount}/>);
+        props.posts.map(post => <Post  key={post.id} message={post.message} likeCounts={post.likesCount}/>);
 
     let onAddPost = () => {
         props.addPost();

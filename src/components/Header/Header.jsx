@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from "../NavBar/Navbar";
 import s from './Header.module.css'
 
-const Header = () => {
+const Header = (props) => {
     return (
         <header className={s.header}>
             <div className={s.header__content}>
@@ -12,8 +12,8 @@ const Header = () => {
                         <input className={s.search} type='search' placeholder='Search...'/>
                     </div>
                 </div>
-                <div className='header-right-side'>
-                    <Navbar/>
+                <div className={s.headerRightSide}>
+                    {props.isAuth ? props.login : <Navbar/>}
                 </div>
             </div>
         </header>

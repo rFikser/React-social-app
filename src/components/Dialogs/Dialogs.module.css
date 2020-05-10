@@ -54,19 +54,17 @@
     border-left: 6px solid grey;
     border-radius: 10px;
     color: #4D4E53;
-    width: 500px;
     max-width: 700px;
     font-size: 20px;
-    display: block
+    display: block;
+    width: 100%;
 }
 
 .myMessage {
     display: flex;
-    align-items: flex-start;
     justify-content: flex-end;
-    margin: 20px 50px;
-    flex-wrap: wrap;
-
+    align-items: flex-start;
+    flex-direction: column;
 }
 
 .messageForm button {
@@ -75,18 +73,20 @@
     margin-left: 10px;
     cursor: pointer;
     border: none;
+
+}
+
+.messageForm button:hover {
+    opacity: 0.7;
 }
 
 .messageItem {
-    width: 50%;
-    font-size: 20px;
-    padding: 10px 50px;
-    justify-content: flex-end;
     display: flex;
-    margin-top: 10px;
-    background: #F4F7F8;
+    justify-content: flex-start;
+    align-items: flex-end;
+    font-size: 20px;
+    width: 90%;
     border-radius: 10px;
-    align-content: flex-start;
-    align-items: flex-start;
-    flex-wrap: wrap;
+    margin: 10px auto;
+
 }

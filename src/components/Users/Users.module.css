@@ -1,0 +1,78 @@
+.container {
+    background-color: rgba(0, 0, 0, .2);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.loader {
+    display: flex;
+    align-items: center;
+    justify-content: stretch;
+    flex-direction: column;
+
+}
+
+.friendBlock {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    width: 500px;
+}
+
+.pageNumbers {
+    display: flex;
+    justify-content: center;
+}
+
+.pageItem {
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.selectedPage {
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.avatar img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.name {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.city {
+    font-style: italic;
+    font-size: 14px;
+    text-align: center;
+}
+
+.followBtn button {
+    border-radius: 5px;
+    width: 100px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-transform: uppercase;
+    outline: none;
+    font-size: 16px;
+    line-height: 2;
+}
+
+.followedUser {
+    background-color: greenyellow;
+    color: black;
+}
+
+.followBtn button:hover {
+    background-color: deepskyblue;
+    color: black;
+
+}

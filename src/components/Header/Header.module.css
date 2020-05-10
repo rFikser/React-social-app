@@ -28,4 +28,14 @@
     margin: 0 0 0 20px;
 }
 
+.headerRightSide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 40px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
   

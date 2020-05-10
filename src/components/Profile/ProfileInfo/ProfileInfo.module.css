@@ -1,19 +1,56 @@
-.backLogo {
-    background-image: url("./img/background.jpg");
-    height: 160px;
-    width: 100%;
-    background-size: cover;
-    background-position: center;
-    background-color: rgba(0, 0, 0, 0.2);
-    /*box-shadow: -20px 20px 8px -10px rgba(0, 0, 0, .5);*/
+* {
+    box-sizing: border-box;
 }
+
+.profileWrapper {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+
 
 .profileDiscription {
     padding: 10px;
-    display: grid;
-    grid-template-columns: 5fr 5fr;
+    display: flex;
     font-size: 18px;
-    background-color: rgba(0, 0, 0, 0.2);
     margin: 10px auto;
     border-radius: 7px;
+    flex-direction: column;
+    flex: 1 1 15px;
+}
+
+.avatar{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.avatar img{
+    border-radius: 50%;
+
+}
+
+.aboutMe {
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.socialContacts {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 15px;
+}
+
+.socialContacts i {
+    font-size: 25px;
+    margin-left: 10px;
+    color: black;
+}
+
+.socialContacts i:hover {
+    opacity: 0.5;
 }

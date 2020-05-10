@@ -4,17 +4,16 @@ import DialogItem from "./DialogItem/DialogItem";
 import MessageItem from "./MessageItem/MessageItem";
 
 
-
 const Dialogs = (props) => {
 
     let state = props.dialogPage;
     let newText = React.createRef();
 
-    let dialogElement = state.dialogs.map( dialog => <DialogItem name={dialog.name} id={dialog.id}/>);
-    let messageElement = state.messages.map(m => <MessageItem  id={m.id} message={m.message}/>)
+    let dialogElement = state.dialogs.map(dialog => <DialogItem name={dialog.name} key={dialog.id} id={dialog.id}/>);
+    let messageElement = state.messages.map(m => <MessageItem key={m.id} id={m.id} message={m.message}/>)
 
     let onSendMessage = () => {
-        props.sendMessage();
+        props.sendMessage()
         props.updateText('')
     }
 
@@ -33,7 +32,8 @@ const Dialogs = (props) => {
                     {messageElement}
                 </div>
                 <div className={s.messageForm}>
-                    <textarea ref={newText} placeholder='Type here...' onChange={onChangeText} value={props.textAreaWords}></textarea>
+                    <textarea ref={newText} placeholder='Type here...' onChange={onChangeText}
+                              value={props.textAreaWords}/>
                     <button onClick={onSendMessage}>Send</button>
                 </div>
             </div>

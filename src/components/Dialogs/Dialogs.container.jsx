@@ -4,7 +4,7 @@ import Dialogs from "./Dialogs";
 import {sendMessageActionCreator, updateTextAreaDialogActionCreator} from "../../redux/dialog-reducer";
 
 let mapStateToProps = (state) => {
-    return  {
+    return {
         dialogPage: state.dialogPage,
         textAreaWords: state.dialogPage.textAreaWords
     }
@@ -15,13 +15,14 @@ let mapDispatchToProps = (dispatch) => {
         sendMessage: () => {
             dispatch(sendMessageActionCreator())
         },
-        updateText : (text) => {
+        updateText: (text) => {
             dispatch(updateTextAreaDialogActionCreator(text))
         }
+
     }
 };
 
 
-const DialogsContainer = connect(mapStateToProps,mapDispatchToProps)(Dialogs);
+const DialogsContainer = connect(mapStateToProps, mapDispatchToProps)(Dialogs);
 
 export default DialogsContainer;
