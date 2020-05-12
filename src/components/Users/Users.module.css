@@ -58,7 +58,7 @@
 .followBtn button {
     border-radius: 5px;
     width: 100px;
-    cursor: pointer;
+    cursor: pointer !important;
     transition: 0.3s;
     text-transform: uppercase;
     outline: none;
