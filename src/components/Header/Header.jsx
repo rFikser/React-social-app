@@ -3,7 +3,6 @@ import Navbar from "../NavBar/Navbar";
 import s from "./Header.module.css";
 
 const Header = (props) => {
-  debugger;
   return (
     <header className={s.header}>
       <div className={s.header__content}>

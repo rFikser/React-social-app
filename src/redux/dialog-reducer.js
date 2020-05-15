@@ -1,48 +1,35 @@
-const SEND_MESSAGE = 'SEND-MESSAGE',
-    UPDATE_TEXT_AREA_DIALOG = 'UPDATE-TEXT-AREA-DIALOG';
+const SEND_MESSAGE = "SEND-MESSAGE";
 
 let initState = {
-    dialogs: [
-        {name: 'John', id: 1},
-        {name: 'NotJohn', id: 2}
-    ],
-    messages: [],
-    textAreaWords: []
-}
+  dialogs: [
+    { name: "John", id: 1 },
+    { name: "NotJohn", id: 2 },
+  ],
+  messages: [],
+};
 
 const dialogReducer = (state = initState, action) => {
-    switch (action.type) {
-        case SEND_MESSAGE : {
-            let newMessage = {
-                id: 1,
-                message: state.textAreaWords
-            }
-            let stateCopy = {...state};
-            stateCopy.messages = [...state.messages];
-            stateCopy.messages.push(newMessage);
-            stateCopy.textAreaWords = '';
-            return stateCopy;
-        }
-        case UPDATE_TEXT_AREA_DIALOG : {
-            let stateCopy = {...state};
-            stateCopy.textAreaWords = action.newText;
-            return stateCopy;
-        }
-        default:
-            return state;
+  switch (action.type) {
+    case SEND_MESSAGE: {
+      let newMessage = {
+        id: 1,
+        message: action.newMessageBody,
+      };
+      let stateCopy = { ...state };
+      stateCopy.messages = [...state.messages];
+      stateCopy.messages.push(newMessage);
+      return stateCopy;
     }
-
-}
-
-export const sendMessageActionCreator = () => {
-    return {
-        type: SEND_MESSAGE
-    }
+    default:
+      return state;
+  }
 };
-export const updateTextAreaDialogActionCreator = (text) => {
-    return {
-        type: UPDATE_TEXT_AREA_DIALOG, newText: text
-    }
-}
+
+export const sendMessageActionCreator = (newMessageBody) => {
+  return {
+    type: SEND_MESSAGE,
+    newMessageBody,
+  };
+};
 
 export default dialogReducer;

@@ -11,7 +11,16 @@ const instance = axios.create({
 export const profileAPI = {
     getProfile(userId) {
         return instance.get(`profile/${userId}`)
+    },
+
+    getStatus(userId) {
+        return instance.get(`profile/status/${userId}`)
+    },
+
+    updateStatus(status) {
+        return instance.put(`profile/status/`, {status})
     }
+
 };
 
 export const headerAPI = {
@@ -34,3 +43,11 @@ export const usersAPI = {
         return instance.delete(`follow/${id}`)
     },
 };
+
+
+export const loginAPI = {
+    logIn(data) {
+        return instance.post(`auth/login`, {data})
+    }
+
+}

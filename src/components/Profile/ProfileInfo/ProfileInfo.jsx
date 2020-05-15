@@ -1,21 +1,18 @@
 import React from 'react';
 import s from './ProfileInfo.module.css';
-import Preloader from "../../common/Preloader";
 import defaultAvatar from '../../../assets/Images/default-avatarpng.png'
+import ProfileStatus from "./ProfileStatus";
 
 
 const ProfileInfo = (props) => {
 
-    if (!props.profile) {
-        return <Preloader/>
-    }
-
     return (
         <div className={s.profileWrapper}>
             <span className={s.avatar}>
-                <img  alt="avatar" src={props.profile.photos.large !== null ? props.profile.photos.large : defaultAvatar}/>
+                <img alt="avatar"
+                     src={props.profile.photos.large !== null ? props.profile.photos.large : defaultAvatar}/>
             </span>
-            <div className={s.aboutMe}>{props.profile.aboutMe}</div>
+            <div className={s.aboutMe}><ProfileStatus status={props.status} updateStatus={props.updateStatus}/></div>
             <div className={s.profileDiscription}>
                 <div className={s.fullName}>Name: <b>{props.profile.fullName}</b></div>
                 <div className={s.socialContacts}>
@@ -26,9 +23,7 @@ const ProfileInfo = (props) => {
                     <a href='#'><i className="fab fa-instagram-square"/></a>
                     <a href='#'><i className="fab fa-github"/></a>
                 </div>
-
             </div>
-
         </div>
     );
 }

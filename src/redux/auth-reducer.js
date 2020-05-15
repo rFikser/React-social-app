@@ -1,13 +1,12 @@
 import {headerAPI} from "../api/api";
 
-const SET_USER_DATA = 'SET_USER_DATA'
+const SET_USER_DATA = 'SET_USER_DATA';
 
 let initState = {
     userId: null,
     email: null,
     login: null,
     isAuth: false,
-
 }
 
 const authReducer = (state = initState, action) => {
@@ -18,7 +17,6 @@ const authReducer = (state = initState, action) => {
                 ...action.data,
                 isAuth: true
             }
-
         default:
             return state;
     }

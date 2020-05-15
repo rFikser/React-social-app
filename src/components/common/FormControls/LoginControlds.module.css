@@ -1,0 +1,13 @@
+
+.error {
+    border: 2px solid red;
+}
+
+.error input {
+    outline: none;
+}
+
+.redText {
+    color: red
+}
+
