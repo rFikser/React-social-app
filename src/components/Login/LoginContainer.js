@@ -2,7 +2,9 @@ import React from "react";
 import LoginForm from "./LoginForm"
 import {reduxForm} from "redux-form";
 import {connect} from "react-redux";
-import {loginTC} from "../../redux/login-reducer";
+import {loginTC, logoutTC} from "../../redux/auth-reducer";
+import {Redirect} from "react-router-dom";
+
 
 
 const LoginReduxForm = reduxForm({
@@ -11,13 +13,18 @@ const LoginReduxForm = reduxForm({
 
 class LoginContainer extends React.Component {
 
-    onSubmit = (formData) => {
-        console.log(formData)
-        this.props.loginTC(formData)
-        formData.email = ''
+    onSubmit = ({email, password, rememberMe}) => {
+        console.log(email, password, rememberMe)
+        this.props.loginTC(email, password, rememberMe)
     }
 
+
     render() {
+
+        if(this.props.isAuth) {
+            return <Redirect to={"/profile"}/>
+        }
+
         return (
             <LoginReduxForm onSubmit={this.onSubmit}/>
         )
@@ -25,8 +32,7 @@ class LoginContainer extends React.Component {
 }
 
 const mapStateToProps = (state) => ({
-    logIn: state.loginPage
+    isAuth: state.auth.isAuth
 })
 
-
-export default connect(mapStateToProps, {loginTC})(LoginContainer)
+export default connect(mapStateToProps, {loginTC, logoutTC})(LoginContainer)

@@ -4,8 +4,8 @@ import s from "./Login.module.css"
 import {ComponentArea} from "../common/FormControls/LoginControls";
 import {maxLengthCreator, required} from "../../utils/validators/validators";
 
-const maxLength10 = maxLengthCreator(10)
-const maxLength15 = maxLengthCreator(15)
+const maxLength10 = maxLengthCreator(30)
+const maxLength15 = maxLengthCreator(30)
 const LoginArea = ComponentArea("input")
 const PasswordArea = ComponentArea("input")
 

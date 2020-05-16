@@ -3,6 +3,7 @@ import Navbar from "../NavBar/Navbar";
 import s from "./Header.module.css";
 
 const Header = (props) => {
+  debugger;
   return (
     <header className={s.header}>
       <div className={s.header__content}>
@@ -12,7 +13,9 @@ const Header = (props) => {
           </div>
         </div>
         <div className={s.headerRightSide}>
-          {props.isAuth ? props.login : <Navbar />}
+          {props.isAuth ?
+              <div className={s.headerRightSide}>{props.login}<div><button onClick={props.onSubmit}>Log out</button></div></div>
+              : <Navbar />}
         </div>
       </div>
     </header>
